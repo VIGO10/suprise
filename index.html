@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Suprise....!</title>
+    </head>
+
+    <body>
+        <div class="greetings">
+            <!-- silahkan menambah kata sesuai keinginan dengan <span>text...</span -->
+                <span>H</span>
+                <span>I</span>
+                <span>~</span>
+                <span>P</span>
+                <span>R</span>
+                <span>E</span>
+                <span>T</span>
+                <span>T</span>
+                <span>Y</span>
+                <span>~</span>
+        </div>
+        <div class="container">
+            <h1>Do you interested going on a date with me? :D</h1>
+            <div class="buttons">
+                <button id="no-btn">No</button>
+                <button id="yes-btn">Yes</button>
+            </div>
+            <div class="popup" id="popup">
+                <p>Aww, thank youu</p>
+                <p>I know this isn't much but here some flowers</p>
+                <button>
+                    <a id="flower-btn" href="flower.html" style="text-decoration: none;">Please Click Here :D</a>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    const noButton = document.getElementById("no-btn");
+    const yesButton = document.getElementById("yes-btn");
+    const popup = document.getElementById("popup")
+
+    noButton.addEventListener("mouseover", () => {
+        noButton.style.position = "absolute";
+        noButton.style.left = Math.random() * 80 +"vw";
+        noButton.style.top = Math.random() * 80 + "vh";
+    });
+
+    yesButton.addEventListener("click", () =>{
+        popup.style.display = "block";
+    });
+
+    popup.addEventListener("click", () => {
+        popup.style.display = "none";
+    });
+
+    popup.style.display = "none";
+</script>
